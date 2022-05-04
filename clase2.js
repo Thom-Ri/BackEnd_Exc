@@ -1,6 +1,5 @@
 class Usuario{
-    pets = []
-    books = []
+    
     constructor(nombre,apellido,libros,mascotas){
         this.nombre = nombre
         this.apellido = apellido
@@ -8,29 +7,37 @@ class Usuario{
         this.mascotas = mascotas   
     };
     getFullName(){
-        alert(`El nombre completo del usuario es ${this.nombre} ${this.apellido}`)
-        console.log("Se ejecuta 1") 
+        console.log(`El nombre completo del usuario es ${this.nombre} ${this.apellido}`) 
     };
     addMascotas(){
-        pets_array = this.pets
-        pets_array.push(mascotas.nombre)
-        console.log("Se ejecuta 2")
+        let pets_array = []    
+        this.mascotas.forEach(mascota => {
+            pets_array.push(mascota)
+        });
+        console.log(pets_array)
     };
     countMascotas(){
-        console.log(`Este usuario tiene ${this.pets.length} mascotas`)
-        console.log("Se ejecuta 3")
+        console.log(`Este usuario tiene ${this.mascotas.length} mascota`)
     };
     addBooks(){
-        book_array = this.books
-        book_array.push(this.libros.autor)
-        console.log("Se ejecuta 4")
+        let librero = []
+        this.libros.forEach(libro => {
+            librero.push({autor : libro.autor, libro: libro.libro})
+        });
+        console.log(librero)
     };
     getBooks(){
-        console.log(`Su libro favorito es ${this.books}`)
-        console.log("Se ejecuta 5")
+        let books= []
+        this.libros.forEach(libro => {
+            books.push(libro.libro)
+        });
+        console.log(`Su libro favorito es "${books}"`)
     };
 }
 
-let luis = new Usuario("Luis", "Rojas", {autor: "Yamal Itau", libro: "100 Dias"},{especie:"Gato", nombre:"Robin"})
+let luis = new Usuario("Luis", "Rojas",[{autor: "Yamal Itau", libro: "100 Dias"}],["SrGato","SrPerro","SrLoro"])
 
-console.log(luis)
+console.log(luis.getFullName())
+console.log(luis.countMascotas())
+console.log(luis.getBooks())
+
