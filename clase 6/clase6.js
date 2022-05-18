@@ -1,4 +1,3 @@
-const http = require('http')
 const fs = require('fs')
 const express = require('express')
 const app = express()
@@ -15,9 +14,20 @@ app.get(`/productos`, (req,res)=>{
 })
 
 app.get(`/productoRandom`, (req,res)=>{
-    let ej = new Contenedor
-    let resp = ej.getRandomProduct()
-    res.send(resp)
+    fs.readFile('./Productos.txt', "utf-8", (err,contenido) =>{
+        if(err){
+            console.log("Problemas en el getByID")
+        }else{
+            let rannum = Math.round(Math.random() * (2 - 0) + 0)
+            console.log("esta pasando algo")
+            const content = JSON.parse(contenido)
+            let FoundItem = content.find((item) => item.id == rannum);
+            console.log(FoundItem)
+            typeof FoundItem
+            res.send(FoundItem)
+        }
+    })
+    
 })
 
 
@@ -31,14 +41,15 @@ class Contenedor{
         return data
     }
     getRandomProduct(id){
-        let archivoCompleto = []
         fs.readFile(this.archivo, "utf-8", (err,contenido) =>{
             if(err){
                 console.log("Problemas en el getByID")
             }else{
+                let rannum = Math.round(Math.random() * (2 - 0) + 0)
+                console.log("esta pasando algo")
                 const content = JSON.parse(contenido)
-                archivoCompleto.push(content)
-                let FoundItem = archivoCompleto.find((item) => item.id != id);
+                let FoundItem = content.find((item) => item.id == rannum);
+                console.log(FoundItem)
                 return FoundItem
             }
         })
