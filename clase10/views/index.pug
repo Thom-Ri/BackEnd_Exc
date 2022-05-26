@@ -1,0 +1,27 @@
+
+html 
+    head
+    body
+        form method="post" action='/NuevoProducto'
+            div 
+               label = "Nombre de producto"
+               input(
+                        type='number'
+                        placeholder='Ingrese el nombre de un producto'
+                )
+            div
+                label = "Precio"
+                input(
+                        type='number'
+                        placeholder='Ingrese un precio'
+                )
+            div
+                label ="URL"
+                input(
+                        type='text'
+                        placeholder='Ingrese una URL'
+                )
+                input (
+                    type = 'sumbit'
+                    value = 'Submit'
+                )
