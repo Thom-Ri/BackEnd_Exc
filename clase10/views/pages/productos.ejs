@@ -8,8 +8,11 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <%-include('../partials/header')-%>
+    </header>
     <h2>Productos</h2>
-    <% contenido.forEach(function (producto){%>
+    <% productos.forEach(function (producto){%>
         <ul>
             <li><%= producto.title%></li>
             <li><%= producto.price%></li>

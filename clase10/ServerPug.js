@@ -1,14 +1,7 @@
 const express = require (`express`)
 const app = express()
+const pug = require('pug');
 const PORT = 8080
-
-const server = app.listen(PORT, ()=> {
-    console.log("escuchando en el puerto 8080")
-});
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
-
-
 const productos = [
     {
       "title": "Escuadra",
@@ -30,29 +23,36 @@ const productos = [
     }
 ]
 
-// EJS
-app.set(`view engine`, `ejs`)
-app.set("views","views")
+const server = app.listen(PORT, ()=> {
+    console.log("escuchando en el puerto 8080")
+});
 
-app.get('', (req, res) => {
-    const contenido = { productos }
-    res.render(`pages/productos`, contenido)
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))   
+app.set("views","views")
+app.set("view engine", "pug")
+
+
+app.get(`/`, (req,res)=>{
+  const contenido = { productos }
+  res.render(`productos.pug`, contenido)
 })
 
 app.get('/NuevoProducto', (req, res) => {
-    const contenido = { productos }
-    res.render(`pages/index`, contenido)
+  const contenido = { productos }
+  res.render(`index.pug`, contenido)
 })
 
-app.post('/products', (req, res) => {
-    const newProduct = {
-        title : req.body.title,
-        price : req.body.price,
-        url : req.body.url
-    }
-    productos.push(newProduct)
-    return res.redirect('/');
+app.post('/producto', (req, res) => {
+  const newProduct = {
+    title : req.body.title,
+    price : req.body.price,
+    url : req.body.url
+  }
+  productos.push(newProduct)
+  res.redirect('/');
 })
+
 server.on(`error`, error =>{
     console.log(error)
 });

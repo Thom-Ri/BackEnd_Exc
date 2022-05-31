@@ -2,26 +2,16 @@
 html 
     head
     body
-        form method="post" action='/NuevoProducto'
+        include partials/header.pug
+        form(method="post" action='/producto')
             div 
-               label = "Nombre de producto"
-               input(
-                        type='number'
-                        placeholder='Ingrese el nombre de un producto'
-                )
+               label Nombre de producto
+               input(type='text' name="title" placeholder='Nombre del producto')
             div
-                label = "Precio"
-                input(
-                        type='number'
-                        placeholder='Ingrese un precio'
-                )
+                label Precio
+                input(type='number' name="price" placeholder='Ingrese un precio')
             div
-                label ="URL"
-                input(
-                        type='text'
-                        placeholder='Ingrese una URL'
-                )
-                input (
-                    type = 'sumbit'
-                    value = 'Submit'
-                )
+                label URL
+                input(type='text' name="url" placeholder='Ingrese una URL')
+                br
+                button(type='submit' placeholder='Submit') Submit

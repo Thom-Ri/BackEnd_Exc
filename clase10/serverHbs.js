@@ -1,12 +1,13 @@
 const express = require (`express`)
 const app = express()
 const PORT = 8080
-
-const server = app.listen(PORT, ()=> {
-    console.log("escuchando en el puerto 8080")
-});
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+const { engine } = require('express-handlebars')
+app.engine('hbs', engine({
+    extname: '.hbs', // en lugar de .handlebars
+    defaultLayout: `${__dirname}/views/index.hbs`,
+    layoutsDir: `${__dirname}/views/layouts`,
+    partialsDir: `${__dirname}/views/partials`
+})) 
 
 
 const productos = [
@@ -30,18 +31,27 @@ const productos = [
     }
 ]
 
-// EJS
-app.set(`view engine`, `ejs`)
+
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+app.set(`view engine`, `hbs`)
 app.set("views","views")
 
-app.get('', (req, res) => {
+
+
+const server = app.listen(PORT, ()=> {
+    console.log("escuchando en el puerto 8080")
+});
+
+
+app.get('/', (req, res) => {
     const contenido = { productos }
-    res.render(`pages/productos`, contenido)
+    return res.render('index.hbs', contenido)
 })
 
 app.get('/NuevoProducto', (req, res) => {
     const contenido = { productos }
-    res.render(`pages/index`, contenido)
+    return res.render('layouts/form',contenido)
 })
 
 app.post('/products', (req, res) => {
@@ -51,8 +61,9 @@ app.post('/products', (req, res) => {
         url : req.body.url
     }
     productos.push(newProduct)
-    return res.redirect('/');
+    res.redirect('/');
 })
+
 server.on(`error`, error =>{
     console.log(error)
 });

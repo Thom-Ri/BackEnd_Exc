@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        {{>header}}
+    </header>
+    <h2>Productos</h2>
+    {{#each productos}}
+        <ul>
+            <li>{{this.title}}</li>
+            <li>{{this.price}}</li>
+            <li>{{this.thumbnail}}</li>
+        </ul>
+    {{/each}}
+</body>
+</html>
