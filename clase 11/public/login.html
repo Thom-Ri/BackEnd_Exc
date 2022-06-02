@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>LOGIN</h1>
+        <form onsubmit = "return addproduct(this)">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nombre de producto</label>
+                <input type="text" name="nombre" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Ingresar nombre de producto">
+            </div>
+            <button class="btn btn-primary">Submit</button>
+        </form>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.3/qs.min.js"></script> 
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>

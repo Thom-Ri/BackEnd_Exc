@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="./index.js"></script>
+    </head>
+    <body>
+        <h1>Desafio con websockets</h1>
+        <form onsubmit="return addproduct(this)">
+            <div class="form-group">
+            <label for="exampleInputEmail1">Nombre de producto</label>
+            <input type="text" name="title" class="form-control" id="titleInput" aria-describedby="emailHelp" placeholder="Ingresar nombre de producto">
+            </div>
+            <div class="form-group">
+            <label for="exampleInputPassword1">Precio</label>
+            <input type="number" name="price" class="form-control" id="priceInput" placeholder="Ingresar Precio">
+            </div>
+            <div class="form-group">
+            <label class="form-check-label" for="exampleCheck1">URL</label>
+            <input type="text" name="url" id="urlInput">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Escuadra</th>
+                <th scope="col">123.45</th>
+                <th scope="col">"https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png"</th>
+              </tr>
+            </thead>
+            <tbody id="tabla">
+              <tr>
+                <th scope="row">1</th>
+                <td>Calculadora</td>
+                <td>234.56</td>
+                <td>https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Globo Terráqueo</td>
+                <td>345.67</td>
+                <td>https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png</td>
+              </tr>
+            </tbody>
+          </table>
+
+        <form onsubmit="return addMessage(this)">
+            <input type="text" id="username" placeholder="Tu Nombre" >
+            <input type="text" id="texto" placeholder="Cuéntanos algo...">
+            <input type="submit" value="Enviar">
+        </form>
+        <div id="mensajes"></div>
+
+    </body>
+</html>
