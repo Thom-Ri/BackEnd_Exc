@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <%- include('../partials/header.ejs') -%>
+    </header>
+    <h2>Producto</h2>
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="IMAGEN DE PRODUCTO">
+            <div class="card-body">
+                <h5 class="card-title"><%-product.title-%></h5>
+                <p class="card-text"><%-product.text-%></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"> Precio <%-product.price-%></li>
+                <li class="list-group-item">ID: <%-product.id-%> </li>
+                <li class="list-group-item">Codigo: <%-product.code-%> </li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link"><%-product.Stock-%></a>
+                <a href="#" class="card-link">Agregar a carrito</a>
+            </div>
+        </div>
+    <h2>Actualizar metodo</h2>
+    <h2>Agregar productos</h2>
+        <form method="post" action=''>
+            <div class="mb-3">
+                <label for="productName" class="form-label">Nombre</label>
+                <input type="text" name="title" class="form-control" id="productName">
+            </div>
+            <div class="mb-3">
+                <label for="productDescrition" class="form-label">Descripción</label>
+                <input type="text" name="text" class="form-control" id="productDescrition">
+            </div>
+            <div class="mb-3">
+                <label for="productPrice" class="form-label">Precio</label>
+                <input type="number" name="price" class="form-control" id="productPrice">
+            </div>
+            <div class="mb-3">
+                <label for="productUrl" class="form-label">Url</label>
+                <input type="text" name="url" class="form-control" id="productUrl">
+            </div>
+            <div class="mb-3">
+                <label for="productCode" class="form-label">Codigo</label>
+                <input type="text" name="code" class="form-control" id="productCode" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+            <label for="productId" class="form-label">Id</label>
+            <input type="number" name="id" class="form-control" id="productId" aria-describedby="emailHelp">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+</body>
+</html>
