@@ -12,7 +12,7 @@
         <%- include('../partials/header.ejs') -%>
     </header>
     <h2>Productos</h2>
-    <% Products.map(product => {%>
+    <% if(Products){Products.map(product => {%>
       <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="IMAGEN DE PRODUCTO">
         <div class="card-body">
@@ -29,6 +29,23 @@
             <a href="#" class="card-link">Borrar</a>
         </div>
       </div>
-    <% });%>
+    <% })}else{%> 
+            <h3>Este carrito no existe</h3>
+    <%};%>
+
+    <h2>Incorporar un producto</h2>
+
+    <form method="post" action="/:id/productos">
+        <select class="form-select" name="addProduct" aria-label="Default select example">
+            <option selected>Agregar</option>
+            <option value="1">Pizarron comercial</option>
+            <option value="2">Estanteria</option>
+            <option value="3">Cajon huertero</option>
+            <option value="4">Mesa exhibidora</option>
+            <option value="5">Mesa multifuncion</option>
+            <option value="6">Mesa parrillera</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Agregar</button>
+    </form>
 </body>
 </html>

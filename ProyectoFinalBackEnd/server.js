@@ -79,7 +79,33 @@ let productos = [
 
 ]
 
-let CartContainer=[]
+let CartContainer=[
+    {   id : 1,
+        creation : 15-6-22,
+        productos: [
+            {
+                "title": "Pizarron comercial",
+                "price": 1600,
+                "text":"Pizarron de dos aguas para uso comercial",
+                "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+                "id": 1,
+                "code":"OASFR67",
+                "Stock":"Disponible",
+                "timestamp": "3/4/16"
+              },
+              {
+                "title": "Estanteria",
+                "price": 7500,
+                "text":"Estanteria de 5 pisos para almacenar variedad de productos",
+                "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+                "id": 2,
+                "code":"LKA6SE4",
+                "Stock":"Disponible",
+                "timestamp": "4/6/16"
+              }
+        ]
+    }
+]
 let admin = false
 
 app.get("",(req,res)=>{
@@ -95,6 +121,7 @@ app.post("",(req,res)=>{
 
 // PRODUCTO
 routerProduct.get('', (req, res) => {
+    console.log("el admin es " + admin)
     const contenido = { productos }
     res.render(`pages/productos`, contenido)
 })
@@ -111,7 +138,7 @@ routerProduct.post('', (req, res) => {
         title : req.params.title,
         price : req.params.price,
         text : req.params.text,
-        id : req.params.id,
+        // id : req.params.id,
         code : req.params.code,
         Stock : req.params.Stock,
         timestamp: Date.now()
@@ -148,20 +175,30 @@ routerProduct.delete('/:id', (req, res) => {
 })
 
 // CARRITO
+routerCart.get('', (req, res) => {
+    res.render(`pages/cartsList.ejs`, {CartContainer})
+})
+
+
 routerCart.get('/:id/productos', (req, res) => {
     const id = Number(req.params.id)
     const cartIndex = CartContainer.findIndex(cart => cart.id === id)
-    const {Product} = CartContainer[cartIndex]
-    res.render(`pages/cartProducts.ejs`, {Product})
+    console.log (CartContainer[cartIndex].productos)
+    const Products =  CartContainer[cartIndex].productos
+    res.render(`pages/cartProducts.ejs`, {Products})
 })
 
 // CARRITO POST
 
 routerCart.post('/:id/productos', (req, res) => {
-    const id = Number(req.params.id)
-    const cartIndex = CartContainer.findIndex(cart => cart.id === id)
-    CartContainer[cartIndex]
-    return res.redirect(`/${id}/productos`);
+    console.log("se ha hecho un post")
+    // const id = Number(req.params.id)
+    // const newProductId = req.params.addProduct.value
+    // console.log("este es el producto nuevo: " + newProductId)
+    // const newProduct = productos.find(producto => producto.id === newProductId)
+    // const cartIndex = CartContainer.findIndex(cart => cart.id === id)
+    // CartContainer[cartIndex].push(newProduct)
+    // return res.redirect(`api/carrito/${id}/productos`);
 })
 routerCart.post('', (req, res) => {
     const newCarrito = {
