@@ -138,12 +138,13 @@ routerProduct.post('', (req, res) => {
         title : req.params.title,
         price : req.params.price,
         text : req.params.text,
-        // id : req.params.id,
+        id : productos.length + 1,
         code : req.params.code,
         Stock : req.params.Stock,
         timestamp: Date.now()
     }
     productos.push(newProduct)
+    console.log(newProduct)
     return res.redirect(`/api/productos`);
 })
 
@@ -185,34 +186,46 @@ routerCart.get('/:id/productos', (req, res) => {
     const cartIndex = CartContainer.findIndex(cart => cart.id === id)
     console.log (CartContainer[cartIndex].productos)
     const Products =  CartContainer[cartIndex].productos
-    res.render(`pages/cartProducts.ejs`, {Products})
+    res.render(`pages/cartProducts.ejs`, {Products, id})
 })
 
 // CARRITO POST
+routerCart.post('/', (req, res) => {
+    const newCarrito = {
+        id : CartContainer.length + 1,
+        creation : new Date(),
+        productos: [
+            {
+                "title": "Mesa multifuncion",
+                "price": 6000,
+                "text":"Mesa multifuncion para taller",
+                "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
+                "id": 5,
+                "code":"ÑLQ14H",
+                "Stock":"Sin Stock",
+                "timestamp": "7/8/17"
+            }
+        ]
+    }
+    CartContainer.push(newCarrito)
+    return res.redirect(`/api/carrito`);
+})
 
 routerCart.post('/:id/productos', (req, res) => {
     console.log("se ha hecho un post")
-    // const id = Number(req.params.id)
-    // const newProductId = req.params.addProduct.value
-    // console.log("este es el producto nuevo: " + newProductId)
-    // const newProduct = productos.find(producto => producto.id === newProductId)
-    // const cartIndex = CartContainer.findIndex(cart => cart.id === id)
-    // CartContainer[cartIndex].push(newProduct)
-    // return res.redirect(`api/carrito/${id}/productos`);
+    const id = Number(req.params.id)
+    const newProductId = req.params.addProduct.value
+    console.log("este es el producto nuevo: " + newProductId)
+    const newProduct = productos.find(producto => producto.id === newProductId)
+    const cartIndex = CartContainer.findIndex(cart => cart.id === id)
+    CartContainer[cartIndex].push(newProduct)
+    return res.redirect(`api/carrito/${id}/productos`);
 })
-routerCart.post('', (req, res) => {
-    const newCarrito = {
-        id : req.body.id,
-        creation : Date.Now(),
-        productos: []
-    }
-    productos.push(CartContainer)
-    return res.redirect('/');
-})
+
 
 // CARRITO DELETE
 
-routerProduct.delete('/:id', (req, res) => {
+routerCart.delete('/:id', (req, res) => {
     const id = Number(req.params.id)
     const cartIndex = CartContainer.findIndex(cart => cart.id === id)
     if(cartIndex === -1){
@@ -222,7 +235,7 @@ routerProduct.delete('/:id', (req, res) => {
 
     console.log(CartContainer)
 })
-routerProduct.delete('/:id/productos/:id_prod', (req, res) => {
+routerCart.delete('/:id/productos/:id_prod', (req, res) => {
     const id = Number(req.params.id)
     const id_prod = Number(req.params.id_prod)
     const cartIndex = CartContainer.findIndex(cart => cart.id === id)

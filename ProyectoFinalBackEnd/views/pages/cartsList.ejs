@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Document</title>
+    <script>
+        function mostrar(){
+            let form = document.getElementById("FormInvisible")
+            form.style.display = "block";
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -28,5 +34,17 @@
     <% })}else{%>
         <h3>Usted no tiene ningun carrito actualmente :(</h3>
     <%};%>
+
+    <button onclick="mostrar()">Agregar Carrito</button>
+
+    <div id="FormInvisible" style="display:none">
+        <form method="post" action="">
+            <label for="exampleInputPassword1" class="form-label">Nombre</label>
+            <input type="text" name="userName" class="form-control" id="exampleInputPassword1">
+
+            <button type="submit" class="btn btn-primary">Crear</button>   
+        </form>
+    </div>
+    
 </body>
 </html>
