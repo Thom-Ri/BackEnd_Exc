@@ -1,0 +1,72 @@
+show databases
+use clase18
+db.createcollection("productos")
+db.productos.insertOne({title: 'PizarronComercial', price: 1600, text: 'PizarroNDosAguasParaUsoComercial', code: 'OASFR67',stock: 'Disponible'})
+db.productos.insertOne({title: 'Estanteria', price: 4500, text: 'Estanteria de 5 pisos para almacenar variedad de productos', code: 'LKA6SE4',stock: 'Disponible'})
+db.productos.insertOne({title: 'Cajon huertero', price: 4600, text: 'Cajon huertero hecho con madera de Eucaliptus Saligna', code: 'BGSO86',stock: 'Disponible'})
+db.productos.insertOne({title: 'Mesa exhibidora de Frutas', price: 4800, text: 'Exhibidor de frutas con 4 compartimientos mas almacenamiento inferior',code: 'PA9REG6',stock: 'Sin Stock'})
+db.productos.insertOne({title: 'Mesa multifuncion', price: 3000, text: 'Mesa multifuncion para taller', code: 'ÑLQ14H', stock: 'Sin Stock'})
+db.productos.insertOne({title: 'tituloUNO', price: 1500, text: 'textoUNO', code: 'codigoUNO',stock: 'Sin Stock'})
+db.productos.insertOne({title: 'tituloDOS', price: 2500, text: 'textoDOS', code: 'codigoDOS',stock: 'Sin Stock'})
+db.productos.insertOne({title: 'tituloTRES', price: 3500, text: 'textoTRES', code: 'codigoTRES',stock: 'Sin Stock'})
+db.productos.insertOne({title: 'tituloCUATRO', price: 4500, text: 'textoCUATRO', code: 'codigoCUATRO',stock: 'Sin Stock'})
+
+db.createCollection("mensajes")
+
+db.mensajes.insertOne({autor: 'user1' , mensaje: 'Hola a todos!', time: `18:42 27/6/22`})
+db.mensajes.insertOne({autor: 'user1' , mensaje: 'Arme este chat para organizar la feria de platos mañana', time: `18:43 27/6/22`})
+db.mensajes.insertOne({autor: 'user1' , mensaje: 'me alegra estar trabajando con ustedes', time: `18:43 27/6/22`})
+db.mensajes.insertOne({autor: 'user2' , mensaje: 'Holaaa', time: `18:45 27/6/22`})
+db.mensajes.insertOne({autor: 'user2' , mensaje: 'igualmente', time: `18:45 27/6/22`})
+db.mensajes.insertOne({autor: 'user3' , mensaje: 'Hola, un gusto chicos', time: `18:47 27/6/22`})
+db.mensajes.insertOne({autor: 'user1' , mensaje: 'que puede traer cada uno?', time: `18:55 27/6/22`})
+db.mensajes.insertOne({autor: 'user2' , mensaje: 'Yo puedo llevar pizza y gaseosa', time: `19:00 27/6/22`})
+db.mensajes.insertOne({autor: 'user3' , mensaje: 'Yo puedo llevar unas magdalenas para compartir', time: `19:01 27/6/22`})
+db.mensajes.insertOne({autor: 'user1' , mensaje: 'Genial, yo todavia estoy decidiendo. Nos encontramos mañana tipo 9?', time: `19:03 27/6/22`})
+db.mensajes.insertOne({autor: 'user2' , mensaje: 'Perfecto, nos vemos ahi', time: `19:10 27/6/22`})
+db.mensajes.insertOne({autor: 'user3' , mensaje: 'Dale, nos vemos!', time: `19:30 27/6/22`})
+
+db.productos.find()
+
+db.mensajes.find()
+
+db.productos.find().pretty()
+
+db.mensajes.find().pretty()
+
+db.productos.estimatedDocumentCount()
+
+db.mensajes.estimatedDocumentCount()
+
+db.productos.insertOne({title: 'tituloCINCO', price: 4500, text: 'textoCINCO', code: 'codigoCINCO',stock: 'Sin Stock'})
+
+db.productos.find({ price : {$lt : 1000 } })
+
+db.productos.find({ $and: [{price : {$gt: 1000}}, {price : {$lt : 3000}}]
+
+db.productos.find({ price: {$gt: 3000 } })
+
+db.productos.find().skip(2).limit(1).sort({price:1})
+
+
+db.productos.updateMany({stock: 'Disponible'}, {$set {stock: 100}}, {multi: true})
+db.productos.updateMany({stock: 'Sin Stock'}, {$set {stock: 100}}, {multi: true})
+
+ 
+db.productos.updateMany({price: {$gt : 4000}}, {$set {stock: 0}}, {multi: true})
+
+ 
+db.coll.deleteMany({price: {$lte:1000}})
+
+use admin
+
+create user ({"user" : "Pepe", pwd : 12345, [ role: "read", db: "clase18" ]})
+
+mongo -u Pepe -p 12345
+
+use clase18
+
+db.productos.find()
+
+db.productos.insertOne(title: "PepeNoEscribeDatos")
+
