@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "riverwoods-ec",
+    "private_key_id": "afb9eff20df77f2e4439c608e8e8c46724deab58",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEugIBADANBgkqhkiG9w0BAQEFAASCBKQwggSgAgEAAoIBAQCdylIRkmmv2Hbn\nfMbcGkgIEKmYTSreEn83HA00UoE+tgNy3QFpizL7w4IKFDraCI0sV1D5XPpuoRM4\nJYq6vb0m/AJQo8kWkJn0H2BIF9n4N97w3FCE4vB6aVMh2BDvz8V4SklErI6/znS2\nf94mZ14Ko4QumeGlJvWOYaw4FlUGUQDVOtwmfFCV4/xlgK71xhq8nCVyNOxMkw9o\nmv78CVCTKZBLw8a15nZxuZjbdeMGuW8hOHDeH8fd59oEMx/tYjb7AGMbLmfIZN4O\n9TPfd7Hnsyl3zsk03lNB0/uW1ffIvY2A+jrjUO9SeLwpi6w7MJQrsP0AiKw/cGWY\neqXFrbx7AgMBAAECgf8TG2zUs+YYZR4A6hsqjAQs9deTmcSXH6ZIBh2TOGpuLZw9\nTIXfQfvqgMI+djSqMl7l/6zOhXPN8bNiGSmzc0Z0cg/Vs/+lu9zosuP11u2OITXd\n9M/LR6/XIunuLzvdzksbReOZbUvb7iQz9UfxXpMEtshK3Fd2qEET/L/eCtZA7V1d\nO2h0rY3uQBetx9JmxC8iKu0U4LzJYf16nZitv5cKbPIqisjHzkSDRGSu0G4G7j1X\nxOgeraBqfgZrj/vZ7hvWzWX2jue0QFeUx0vZHdh21jXneFsqmShBcAl3AWa1qWeZ\nQuGuw59ESg0i0Q9WYFynLj8NOQ3WwyFTuxux48kCgYEA2HLSBOkjjW9165httFaN\naMDrD9L2XfmXnXZd+MLwQ0rq8CtPZKWpP8hQlrsdUZ4aEAgTX1QMBRBEZlkV22N/\nizBqLSKYbUjfWzYjiCG3hCNuNX6WfiMS9mJoftOOFnm7yfKXCf5G0BDRZHm03W8K\n8tQ+ogn6ZCFzSXLeFTBt7Z8CgYEAup+LwQsWnReGpgftz9QrmglNfusviNYeUg5E\nqPQvm2kl9hQqeCxmG0Hlp7NHHxtS2LX5t54FVqufzzroYid/54D/mwEz+FTwe/ja\n8OOhrRl5L+tXLQnpuOsF+XBZgJCNNQTCUmPWDnwxGl5ZUaeC863OBnbPeSfDjwW6\nAK4KS6UCgYBA9RR6TM1SoOSus6wYtvDxQxRIR3OQeFs78k35XedlCpK/SQAmoGDO\nt3sYAUenOt9veDz4Gu0Qh/U/EfUxRgb86qayrPM5uOjvIqw/Kn88tLVacIcRi80h\nDB94EF1P+XCWBqu1YA44WxO8J5pT6gNLJM83Ke9vJWrH3CUyDrqu2QKBgBWf6yfB\nSyuE0Ftoy8urQConLc2pHubyOK01bgtN0D5n3rg2+fzW2DYMWrol8fXOyrjFzVvT\nebbjSC9RGiBVh2Kh9fxWFVmPLhaPbX9AQTm3m+1LjdxwK577zMNsm1JkbZhZJtM5\nMlKXXXE6wYrOqEPoPdlN5xiY3PYzqavufs7pAoGATLQZWtIZ47HqRyx5cvBsGwrM\n/Eehd1qZsXV48qWyFmkQpZTuVDRflEvsV9gdmpDd0g2mLiONpIGebhaXFF9uBqNa\ng4VNU4egZfaw9iwidAaXiHWzqGvtG7mmhXcQFaqBX88C9JkOr73yKMk6auhmMJ8V\nmQ4EMrUddHlw1jVKTK8=\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-k05k7@riverwoods-ec.iam.gserviceaccount.com",
+    "client_id": "113752159329042473085",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-k05k7%40riverwoods-ec.iam.gserviceaccount.com"
+}
+  

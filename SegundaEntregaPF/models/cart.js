@@ -7,4 +7,4 @@ const CartSchema = new Schema({
 })
 
 
-module.exports = model('carritos', CartSchema)
+module.exports = model('cartModel', CartSchema)
