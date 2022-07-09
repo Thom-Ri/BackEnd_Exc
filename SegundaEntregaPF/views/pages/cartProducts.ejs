@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <%- include('../partials/header.ejs') -%>
+    </header>
+    <h2>Productos</h2>
+    <% cart.map(product => {%>
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="IMAGEN DE PRODUCTO">
+        <div class="card-body">
+            <h5 class="card-title"><%-product.title-%></h5>
+            <p class="card-text"><%-product.text-%></p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"> Precio <%-product.price-%></li>
+            <li class="list-group-item">ID: <%-product.id-%> </li>
+            <li class="list-group-item">Codigo: <%-product.code-%> </li>
+        </ul>
+        <div class="card-body">
+            <a href="#" class="card-link"><%-product.Stock-%></a>
+            <a href="#" class="card-link">Borrar</a>
+        </div>
+      </div>
+    <% })}else{%> 
+            <h3>Este carrito no existe</h3>
+    <%};%>
+
+    <h2>Incorporar un producto</h2>
+
+    <form method="post" action="/:id/productos">
+        <select class="form-select" name="addProduct" aria-label="Default select example">
+            <option selected>Agregar</option>
+            <option value="1">Pizarron comercial</option>
+            <option value="2">Estanteria</option>
+            <option value="3">Cajon huertero</option>
+            <option value="4">Mesa exhibidora</option>
+            <option value="5">Mesa multifuncion</option>
+            <option value="6">Mesa parrillera</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Agregar</button>
+    </form>
+</body>
+</html>
