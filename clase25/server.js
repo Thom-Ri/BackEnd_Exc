@@ -12,11 +12,16 @@ const flash = require('connect-flash')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
 app.use(cookieParser())
+
+app.use(cookieParser())
 app.use(session({
     secret: 'shhh',
+    rolling: true,
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: false,
+    ttl: 100000
 }))
+
 app.use(flash())
 
 const mongoose = require(`mongoose`)
