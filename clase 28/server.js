@@ -7,7 +7,6 @@ const session = require('express-session')
 const mongoose = require(`mongoose`)
 const User = require('./models/user')
 const passport = require(`passport`)
-
 const app = express()
 const PORT = process.argv[2] || 8080
 const {Router} = express
@@ -53,7 +52,7 @@ passport.deserializeUser((id, done)=>{
 
 
 app.listen(PORT, (req,res)=>{
-    console.log("servidor servido")
+    console.log(`Escuchando al servidor ${PORT}`)
 })
 //  LOGIN
 app.get("/login",(req, res)=>{
