@@ -1,0 +1,361 @@
+Running scenarios...
+Phase started: unnamed (index: 0, duration: 1s) 23:07:10(-0300)
+
+Phase completed: unnamed (index: 0, duration: 1s) 23:07:11(-0300)
+
+All VUs finished. Total time: 5 seconds
+
+--------------------------------
+Summary report @ 23:07:14(-0300)
+--------------------------------
+
+http.codes.404: ................................................................ 1000
+http.request_rate: ............................................................. 468/sec
+http.requests: ................................................................. 1000
+http.response_time:
+  min: ......................................................................... 0
+  max: ......................................................................... 20
+  median: ...................................................................... 7
+  p95: ......................................................................... 13.1
+  p99: ......................................................................... 18
+http.responses: ................................................................ 1000
+vusers.completed: .............................................................. 50
+vusers.created: ................................................................ 50
+vusers.created_by_name.0: ...................................................... 50
+vusers.failed: ................................................................. 0
+vusers.session_length:
+  min: ......................................................................... 103.8
+  max: ......................................................................... 231.2
+  median: ...................................................................... 198.4
+  p95: ......................................................................... 223.7
+  p99: ......................................................................... 223.7
+
+
+
+
+PROFILING WEB
+
+
+29863.7 ms	229863.7 ms	(idle)	
+59.5 ms7.41 %	59.5 ms7.41 %	(program)	
+41.4 ms5.15 %	41.4 ms5.15 %	writev	
+32.9 ms4.10 %	32.9 ms4.10 %	(garbage collector)	
+28.8 ms3.59 %	131.4 ms16.36 %	compressionindex.js:59	
+26.1 ms3.25 %	208.6 ms25.97 %	writeindex.js:273	
+17.6 ms2.19 %	183.2 ms22.81 %	expressInitinit.js:29	
+13.7 ms1.71 %	24.0 ms2.99 %	emitHooknode:internal/async_hooks:224	
+11.8 ms1.47 %	104.6 ms13.02 %	endnode:_http_outgoing:833	
+10.4 ms1.29 %	38.3 ms4.77 %	attachListenerindex.js:141	
+10.1 ms1.26 %	15.5 ms1.94 %	setHeadernode:_http_outgoing:574	
+10.0 ms1.25 %	17.0 ms2.12 %	_storeHeadernode:_http_outgoing:374	
+9.2 ms1.15 %	9.2 ms1.15 %	asyncTaskScheduled	
+9.2 ms1.15 %	61.5 ms7.66 %	writevGenericnode:internal/s…se_commons:122	
+8.9 ms1.11 %	955.9 ms119.01 %	nextindex.js:177	
+8.6 ms1.07 %	525.8 ms65.46 %	emitnode:events:470	
+8.5 ms1.05 %	16.9 ms2.10 %	Readablenode:internal/s…s/readable:181	
+8.5 ms1.05 %	9.2 ms1.15 %	originalurlindex.js:65	
+8.3 ms1.04 %	29.1 ms3.62 %	resOnFinishnode:_http_server:788	
+8.1 ms1.01 %	8.9 ms1.11 %	_addListenernode:events:548	
+8.0 ms1.00 %	335.2 ms41.74 %	processTicksAndRejectionsnode:internal/p…task_queues:68	
+7.3 ms0.91 %	21.3 ms2.65 %	nextTicknode:internal/p…ask_queues:104	
+7.3 ms0.91 %	11.7 ms1.46 %	parseQueryStringValuesparse.js:51	
+7.3 ms0.91 %	27.7 ms3.45 %	attachFinishedListenerindex.js:91	
+7.0 ms0.87 %	24.1 ms3.00 %	writeHeadnode:_http_server:269	
+7.0 ms0.87 %	28.8 ms3.59 %	module.exportsparse.js:239	
+7.0 ms0.87 %	156.3 ms19.46 %	jsonParserjson.js:98	
+6.6 ms0.83 %	839.8 ms104.56 %	handlelayer.js:86	
+6.6 ms0.83 %	6.6 ms0.83 %	encodeUrlindex.js:56	
+6.5 ms0.81 %	15.9 ms1.98 %	firstindex.js:24	
+6.5 ms0.81 %	222.7 ms27.72 %	listenerindex.js:162	
+6.4 ms0.80 %	237.9 ms29.62 %	handleindex.js:136	
+6.3 ms0.79 %	161.7 ms20.13 %	endindex.js:92	
+5.9 ms0.73 %	250.8 ms31.23 %	endReadableNTnode:internal/s…/readable:1339	
+5.9 ms0.73 %	299.5 ms37.29 %	parserOnHeadersCompletenode:_http_common:77	
+5.9 ms0.73 %	47.1 ms5.86 %	callbackTrampolinenode:internal/async_hooks:118	
+5.6 ms0.70 %	14.9 ms1.85 %	initnode:internal/i…_async_hook:16	
+5.5 ms0.69 %	275.2 ms34.26 %	parserOnIncomingnode:_http_server:852	
+5.4 ms0.67 %	18.3 ms2.27 %	IncomingMessagenode:_http_incoming:51	
+5.4 ms0.67 %	5.4 ms0.67 %	onHeadersindex.js:56	
+5.3 ms0.66 %	11.9 ms1.49 %	resume_node:internal/s…s/readable:985	
+5.3 ms0.66 %	15.3 ms1.91 %	Socketnode:net:283	
+5.1 ms0.63 %	11.6 ms1.45 %	parserOnMessageCompletenode:_http_common:147	
+4.7 ms0.59 %	5.6 ms0.70 %	ReadableStatenode:internal/s…ms/readable:78	
+4.7 ms0.59 %	91.3 ms11.36 %	(anónimo)index.js:86	
+4.4 ms0.55 %	4.4 ms0.55 %	queueDestroyAsyncId	
+4.4 ms0.55 %	216.0 ms26.89 %	runInAsyncScopenode:async_hooks:195	
+4.4 ms0.55 %	48.0 ms5.98 %	writeHeadindex.js:28	
+4.3 ms0.53 %	5.0 ms0.62 %	_addHeaderLinenode:_http_incoming:337	
+4.3 ms0.53 %	4.4 ms0.55 %	isFinishedindex.js:66	
+4.2 ms0.52 %	8.6 ms1.07 %	_destroynode:_http_incoming:176	
+4.2 ms0.52 %	5.7 ms0.72 %	parseurlindex.js:35	
+4.2 ms0.52 %	8.1 ms1.01 %	_finishnode:_http_server:203	
+3.8 ms0.48 %	4.1 ms0.51 %	removeHeadernode:_http_outgoing:650	
+3.8 ms0.48 %	3.8 ms0.48 %	decodeutils.js:111	
+3.8 ms0.48 %	138.3 ms17.21 %	urlencodedParserurlencoded.js:79	
+3.8 ms0.48 %	8.7 ms1.08 %	onSocketindex.js:107	
+3.7 ms0.46 %	16.6 ms2.06 %	setStreamTimeoutnode:internal/s…se_commons:237	
+3.7 ms0.46 %	242.7 ms30.22 %	handleapplication.js:165	
+3.6 ms0.45 %	4.4 ms0.55 %	hasbodyindex.js:92	
+3.5 ms0.43 %	16.7 ms2.08 %	Readable.onnode:internal/s…s/readable:875	
+3.5 ms0.43 %	67.2 ms8.36 %	sendindex.js:272	
+3.4 ms0.42 %	3.4 ms0.42 %	lookupPublicResourcenode:internal/async_hooks:177	
+3.0 ms0.38 %	5.0 ms0.62 %	_dumpnode:_http_incoming:364	
+2.9 ms0.36 %	2.9 ms0.36 %	byteLengthUtf8	
+2.9 ms0.36 %	10.1 ms1.26 %	_sendnode:_http_outgoing:319	
+2.9 ms0.36 %	7.8 ms0.97 %	resumenode:internal/s…s/readable:978	
+2.8 ms0.35 %	2.9 ms0.36 %	getHeadernode:_http_outgoing:590	
+2.8 ms0.35 %	11.3 ms1.40 %	write_node:_http_outgoing:730	
+2.7 ms0.34 %	4.2 ms0.52 %	appendindex.js:38	
+2.6 ms0.32 %	2.6 ms0.32 %	asyncTaskStarted	
+2.6 ms0.32 %	3.4 ms0.42 %	createHtmlDocumentindex.js:43	
+2.6 ms0.32 %	2.8 ms0.35 %	compactutils.js:190	
+2.6 ms0.32 %	2.6 ms0.32 %	registerDestroyHook	
+2.5 ms0.31 %	11.4 ms1.42 %	addListenernode:events:616	
+2.5 ms0.31 %	36.8 ms4.59 %	afterWritenode:internal/s…s/writable:487	
+2.5 ms0.31 %	17.6 ms2.19 %	onResponseHeadersindex.js:140	
+2.5 ms0.31 %	3.8 ms0.48 %	_writenode:internal/s…s/writable:283	
+2.4 ms0.29 %	2.4 ms0.29 %	checkInvalidHeaderCharnode:_http_common:232	
+2.4 ms0.29 %	7.3 ms0.91 %	_writeRawnode:_http_outgoing:344	
+2.4 ms0.29 %	2.4 ms0.29 %	onParserExecuteCommonnode:_http_server:691	
+2.4 ms0.29 %	4.1 ms0.51 %	unenrollnode:timers:78	
+2.4 ms0.29 %	50.4 ms6.27 %	_implicitHeadernode:_http_server:264	
+2.4 ms0.29 %	9.2 ms1.15 %	varyindex.js:133	
+2.4 ms0.29 %	3.9 ms0.49 %	parseQueryStringKeysparse.js:150	
+2.4 ms0.29 %	7.0 ms0.87 %	onwritenode:internal/s…s/writable:425	
+2.4 ms0.29 %	93.5 ms11.64 %	(anónimo)index.js:640	
+2.3 ms0.28 %	7.3 ms0.91 %	getnode:_http_incoming:108	
+2.3 ms0.28 %	844.9 ms105.19 %	(anónimo)index.js:280	
+2.3 ms0.28 %	842.5 ms104.90 %	trim_prefixindex.js:293	
+2.1 ms0.27 %	4.7 ms0.59 %	beforenode:internal/i…_async_hook:28	
+2.1 ms0.27 %	2.1 ms0.27 %	emitCloseNTnode:_http_server:843	
+2.1 ms0.27 %	28.7 ms3.58 %	onconnectionnode:net:1544	
+2.1 ms0.27 %	6.3 ms0.79 %	flownode:internal/s…/readable:1009	
+2.1 ms0.27 %	2.1 ms0.27 %	asyncTaskFinished	
+2.1 ms0.27 %	5.6 ms0.70 %	Socket._destroynode:net:667	
+2.1 ms0.27 %	2.1 ms0.27 %	matchlayer.js:110	
+2.1 ms0.27 %	222.8 ms27.74 %	queryquery.js:39	
+2.1 ms0.27 %	2.1 ms0.27 %	checkIsHttpTokennode:_http_common:221	
+2.1 ms0.27 %	2.1 ms0.27 %	compressibleindex.js:41	
+2.1 ms0.27 %	9.8 ms1.22 %	AsyncResourcenode:async_hooks:158	
+2.0 ms0.25 %	5.9 ms0.73 %	socketListenerWrapnode:_http_server:1001	
+2.0 ms0.25 %	8.8 ms1.09 %	connectionListenerInternalnode:_http_server:443	
+2.0 ms0.25 %	2.1 ms0.27 %	normalizeParseOptionsparse.js:204	
+1.9 ms0.24 %	229.2 ms28.54 %	callbackindex.js:53	
+1.9 ms0.24 %	1.9 ms0.24 %	EventEmitter.initnode:events:324	
+1.9 ms0.24 %	1.9 ms0.24 %	close	
+1.9 ms0.24 %	64.6 ms8.04 %	Socket._writeGenericnode:net:769	
+1.8 ms0.22 %	3.8 ms0.48 %	Readable.removeListenernode:internal/s…s/readable:905	
+1.8 ms0.22 %	18.9 ms2.36 %	emitInitScriptnode:internal/async_hooks:496	
+1.8 ms0.22 %	9.8 ms1.22 %	Readable.readnode:internal/s…s/readable:394	
+1.8 ms0.22 %	2.7 ms0.34 %	detachSocketnode:_http_server:248	
+1.8 ms0.22 %	10.0 ms1.25 %	setUnrefTimeoutnode:internal/timers:372	
+1.8 ms0.22 %	1.8 ms0.22 %	setWriteHeadHeadersindex.js:105	
+1.8 ms0.22 %	2.6 ms0.32 %	headersSentindex.js:255	
+1.7 ms0.21 %	9.4 ms1.16 %	Readable.resumenode:internal/s…s/readable:964	
+1.7 ms0.21 %	3.6 ms0.45 %	EventEmitternode:events:207	
+1.7 ms0.21 %	69.7 ms8.68 %	Writable.uncorknode:internal/s…s/writable:341	
+1.7 ms0.21 %	2.6 ms0.32 %	_finishnode:_http_outgoing:909	
+1.6 ms0.20 %	2.0 ms0.25 %	removeListenernode:events:687	
+1.6 ms0.20 %	1.6 ms0.20 %	parseindex.js:96	
+1.6 ms0.20 %	6.3 ms0.79 %	assignSocketnode:_http_server:239	
+1.6 ms0.20 %	17.2 ms2.15 %	destroynode:internal/s…ams/destroy:32	
+1.6 ms0.20 %	1.9 ms0.24 %	fastparseindex.js:95	
+1.6 ms0.20 %	68.1 ms8.47 %	clearBuffernode:internal/s…s/writable:529	
+1.6 ms0.20 %	3.7 ms0.46 %	processHeadernode:_http_outgoing:501	
+1.6 ms0.20 %	3.3 ms0.41 %	cachenode:internal/http:26	
+1.6 ms0.20 %	2.4 ms0.29 %	createWriteWrapnode:internal/s…se_commons:109	
+1.6 ms0.20 %	8.6 ms1.07 %	afterWriteDispatchednode:internal/s…se_commons:155	
+1.5 ms0.18 %	6.3 ms0.79 %	emitAfterScriptnode:internal/async_hooks:518	
+1.5 ms0.18 %	3.6 ms0.45 %	afternode:internal/i…_async_hook:34	
+1.5 ms0.18 %	4.3 ms0.53 %	insertnode:internal/timers:350	
+1.5 ms0.18 %	1.5 ms0.18 %	asyncTaskCanceled	
+1.5 ms0.18 %	15.7 ms1.95 %	_destroynode:internal/s…ams/destroy:70	
+1.5 ms0.18 %	10.3 ms1.28 %	defaultTriggerAsyncIdScopenode:internal/async_hooks:456	
+1.5 ms0.18 %	4.3 ms0.53 %	onErrornode:_http_incoming:374	
+1.5 ms0.18 %	225.7 ms28.10 %	onFinishindex.js:96	
+1.5 ms0.18 %	30.3 ms3.77 %	parseExtendedQueryStringutils.js:289	
+1.5 ms0.18 %	51.7 ms6.44 %	onFinishedindex.js:46	
+1.5 ms0.18 %	11.5 ms1.43 %	wrapindex.js:219	
+1.5 ms0.18 %	5.9 ms0.73 %	readableAddChunknode:internal/s…s/readable:236	
+1.4 ms0.17 %	1.4 ms0.17 %	newAsyncIdnode:internal/async_hooks:417	
+1.4 ms0.17 %	1.4 ms0.17 %	parseObjectparse.js:115	
+1.2 ms0.15 %	2.3 ms0.28 %	OutgoingMessagenode:_http_outgoing:97	
+1.2 ms0.15 %	1.2 ms0.15 %	readStart	
+1.2 ms0.15 %	1.7 ms0.21 %	unpipeindex.js:40	
+1.1 ms0.14 %	2.6 ms0.32 %	destroynode:internal/i…_async_hook:40	
+1.1 ms0.14 %	1.1 ms0.14 %	hasHooksnode:internal/async_hooks:471	
+1.1 ms0.14 %	3.5 ms0.43 %	initAsyncResourcenode:internal/timers:157	
+1.1 ms0.14 %	5.0 ms0.62 %	Writable.writenode:internal/s…s/writable:333	
+1.1 ms0.14 %	65.8 ms8.19 %	Socket._writevnode:net:801	
+1.1 ms0.14 %	1.1 ms0.14 %	matchHeadernode:_http_outgoing:524	
+1.1 ms0.14 %	4.6 ms0.58 %	byteLengthnode:buffer:728	
+1.0 ms0.13 %	1.0 ms0.13 %	clearRequestTimeoutnode:_http_server:774	
+1.0 ms0.13 %	243.6 ms30.33 %	appexpress.js:38	
+1.0 ms0.13 %	6.8 ms0.84 %	Duplexnode:internal/s…eams/duplex:52	
+1.0 ms0.13 %	1.0 ms0.13 %	setapplication.js:359	
+1.0 ms0.13 %	1.7 ms0.21 %	Readable.removeAllListenersnode:internal/s…s/readable:923	
+1.0 ms0.13 %	1.0 ms0.13 %	get length	
+1.0 ms0.13 %	1.0 ms0.13 %	freshindex.js:153	
+1.0 ms0.13 %	3.8 ms0.48 %	shouldCompressindex.js:254	
+1.0 ms0.13 %	2.1 ms0.27 %	storeHeadernode:_http_outgoing:517	
+0.9 ms0.11 %	0.9 ms0.11 %	popAsyncContextnode:internal/async_hooks:554	
+0.9 ms0.11 %	5.6 ms0.70 %	emitBeforeScriptnode:internal/async_hooks:510	
+0.9 ms0.11 %	4.2 ms0.52 %	onParserExecutenode:_http_server:634	
+0.9 ms0.11 %	3.8 ms0.48 %	Socket.resumenode:net:630	
+0.9 ms0.11 %	3.6 ms0.45 %	ServerResponsenode:_http_server:178	
+0.9 ms0.11 %	0.9 ms0.11 %	getnode:net:1702	
+0.9 ms0.11 %	3.0 ms0.38 %	onDestroynode:internal/s…ams/destroy:73	
+0.9 ms0.11 %	0.9 ms0.11 %	removenode:internal/linkedlist:16	
+0.9 ms0.11 %	0.9 ms0.11 %	getLibuvNow	
+0.9 ms0.11 %	3.0 ms0.38 %	(anónimo)node:_http_outgoing:564	
+0.9 ms0.11 %	0.9 ms0.11 %	getnode:_http_outgoing:162	
+0.9 ms0.11 %	1.1 ms0.14 %	mergeutils.js:47	
+0.8 ms0.10 %	4.4 ms0.55 %	Streamnode:internal/s…eams/legacy:10	
+0.8 ms0.10 %	0.8 ms0.10 %	debugdebug.js:65	
+0.8 ms0.10 %	4.2 ms0.52 %	Socket.readnode:net:639	
+0.8 ms0.10 %	0.8 ms0.10 %	_getMaxListenersnode:events:401	
+0.8 ms0.10 %	2.0 ms0.25 %	readStartnode:_http_incoming:40	
+0.8 ms0.10 %	6.4 ms0.80 %	resetSocketTimeoutnode:_http_server:957	
+0.8 ms0.10 %	0.8 ms0.10 %	pushAsyncContextnode:internal/async_hooks:540	
+0.8 ms0.10 %	2.3 ms0.28 %	_unrefTimernode:net:417	
+0.8 ms0.10 %	1.0 ms0.13 %	_flushnode:_http_outgoing:934	
+0.8 ms0.10 %	0.8 ms0.10 %	matchKnownFieldsnode:_http_incoming:231	
+0.8 ms0.10 %	5.0 ms0.62 %	clearTimeoutnode:timers:184	
+0.8 ms0.10 %	33.6 ms4.18 %	onFinishnode:_http_outgoing:828	
+0.8 ms0.10 %	1.0 ms0.13 %	freeParsernode:_http_common:192	
+0.8 ms0.10 %	3.2 ms0.39 %	cleanupindex.js:58	
+0.8 ms0.10 %	0.8 ms0.10 %	escapeHtmlindex.js:33	
+0.8 ms0.10 %	1.2 ms0.15 %	enabledapplication.js:438	
+0.8 ms0.10 %	0.8 ms0.10 %	WriteWrap	
+0.8 ms0.10 %	0.8 ms0.10 %	getnode:_http_outgoing:687	
+0.7 ms0.08 %	18.9 ms2.36 %	emitInitNativenode:internal/async_hooks:192	
+0.7 ms0.08 %	0.7 ms0.08 %	writeOrBuffernode:internal/s…s/writable:365	
+0.7 ms0.08 %	4.5 ms0.56 %	emitReadable_node:internal/s…s/readable:574	
+0.7 ms0.08 %	37.5 ms4.67 %	afterWriteTicknode:internal/s…s/writable:482	
+0.7 ms0.08 %	5.1 ms0.63 %	emitDestroyScriptnode:internal/async_hooks:526	
+0.7 ms0.08 %	1.5 ms0.18 %	Timeout.refreshnode:internal/timers:210	
+0.7 ms0.08 %	1.6 ms0.20 %	Writablenode:internal/s…s/writable:219	
+0.7 ms0.08 %	4.2 ms0.52 %	Timeoutnode:internal/timers:167	
+0.7 ms0.08 %	0.7 ms0.08 %	removeAllListenersnode:events:747	
+0.7 ms0.08 %	0.7 ms0.08 %	getEncodingOpsnode:buffer:678	
+0.7 ms0.08 %	0.8 ms0.10 %	nocompressindex.js:134	
+0.6 ms0.07 %	0.7 ms0.08 %	emitCloseNTnode:internal/s…ms/destroy:126	
+0.6 ms0.07 %	6.5 ms0.81 %	endReadablenode:internal/s…/readable:1329	
+0.6 ms0.07 %	4.4 ms0.55 %	onEofChunknode:internal/s…s/readable:533	
+0.6 ms0.07 %	0.9 ms0.11 %	hasObservernode:internal/perf/observe:474	
+0.6 ms0.07 %	34.1 ms4.25 %	callbacknode:internal/s…s/writable:550	
+0.6 ms0.07 %	229.8 ms28.61 %	oneventindex.js:81	
+0.6 ms0.07 %	2.4 ms0.29 %	emitReadablenode:internal/s…s/readable:563	
+0.6 ms0.07 %	0.6 ms0.07 %	highWaterMarkFromnode:internal/streams/state:10	
+0.6 ms0.07 %	1.1 ms0.14 %	app.<computed>application.js:490	
+0.6 ms0.07 %	0.6 ms0.07 %	cleanParsernode:_http_common:236	
+0.6 ms0.07 %	0.6 ms0.07 %	restoreindex.js:631	
+0.6 ms0.07 %	1.2 ms0.15 %	initialize	
+0.6 ms0.07 %	2.7 ms0.34 %	matchLayerindex.js:583	
+0.6 ms0.07 %	5.4 ms0.67 %	getPathnameindex.js:537	
+0.6 ms0.07 %	0.9 ms0.11 %	clearIncomingnode:_http_server:749	
+0.6 ms0.07 %	1.4 ms0.17 %	appendnode:internal/linkedlist:30	
+0.6 ms0.07 %	10.0 ms1.25 %	getResourceNameindex.js:220	
+0.5 ms0.06 %	0.9 ms0.11 %	listOnTimeoutnode:internal/timers:507	
+0.5 ms0.06 %	6.3 ms0.79 %	Readable.pushnode:internal/s…s/readable:227	
+0.5 ms0.06 %	0.7 ms0.08 %	shiftnode:internal/fixed_queue:108	
+0.5 ms0.06 %	0.5 ms0.06 %	getTimerDurationnode:internal/timers:383	
+0.5 ms0.06 %	0.5 ms0.06 %	listenerCountnode:events:852	
+0.5 ms0.06 %	0.5 ms0.06 %	getProtohostindex.js:546	
+0.5 ms0.06 %	0.5 ms0.06 %	resetBuffernode:internal/s…s/writable:202	
+0.5 ms0.06 %	0.5 ms0.06 %	spliceOnenode:internal/util:394	
+0.5 ms0.06 %	0.7 ms0.08 %	shutdown	
+0.5 ms0.06 %	0.5 ms0.06 %	validateStringnode:internal/validators:118	
+0.5 ms0.06 %	2.6 ms0.32 %	(anónimo)node:_http_outgoing:558	
+0.5 ms0.06 %	0.5 ms0.06 %	DTRACE_HTTP_SERVER_RESPONSE	
+0.5 ms0.06 %	0.5 ms0.06 %	Readable.unpipenode:internal/s…s/readable:840	
+0.3 ms0.04 %	1.2 ms0.15 %	processTimersnode:internal/timers:487	
+0.3 ms0.04 %	0.3 ms0.04 %	shiftnode:internal/fixed_queue:80	
+0.3 ms0.04 %	3.5 ms0.43 %	onStreamReadnode:internal/s…se_commons:167	
+0.3 ms0.04 %	1.9 ms0.24 %	Writable.endnode:internal/s…s/writable:594	
+0.3 ms0.04 %	0.6 ms0.07 %	insertGuardednode:internal/timers:325	
+0.3 ms0.04 %	1.6 ms0.20 %	tryReadStartnode:net:586	
+0.3 ms0.04 %	845.2 ms105.23 %	process_paramsindex.js:338	
+0.3 ms0.04 %	0.3 ms0.04 %	getnode:internal/s…/readable:1271	
+0.3 ms0.04 %	1.2 ms0.15 %	Socket._finalnode:net:427	
+0.3 ms0.04 %	0.3 ms0.04 %	Urlnode:url:60	
+0.3 ms0.04 %	0.3 ms0.04 %	getDefaultTriggerAsyncIdnode:internal/async_hooks:433	
+0.3 ms0.04 %	66.1 ms8.24 %	doWritenode:internal/s…s/writable:398	
+0.3 ms0.04 %	0.3 ms0.04 %	compactQueueutils.js:17	
+0.3 ms0.04 %	0.3 ms0.04 %	getObserverTypenode:internal/perf/observe:117	
+0.3 ms0.04 %	1.4 ms0.17 %	maybeMaputils.js:230	
+0.3 ms0.04 %	0.5 ms0.06 %	normalizeEncodingnode:internal/util:160	
+0.2 ms0.03 %	0.2 ms0.03 %	processPromiseRejectionsnode:internal/p…s/promises:197	
+0.2 ms0.03 %	0.2 ms0.03 %	_addHeaderLinesnode:_http_incoming:199	
+0.2 ms0.03 %	0.2 ms0.03 %	runMicrotasks	
+0.2 ms0.03 %	6.8 ms0.84 %	finishnode:internal/s…s/writable:745	
+0.2 ms0.03 %	0.2 ms0.03 %	setHasRejectionToWarnnode:internal/p…ss/promises:74	
+0.2 ms0.03 %	1.7 ms0.21 %	afterShutdownnode:net:451	
+0.2 ms0.03 %	0.2 ms0.03 %	getnode:internal/s…/readable:1166	
+0.2 ms0.03 %	0.2 ms0.03 %	DTRACE_HTTP_SERVER_REQUEST	
+0.2 ms0.03 %	1.7 ms0.21 %	finishMaybenode:internal/s…s/writable:731	
+0.2 ms0.03 %	0.2 ms0.03 %	getnode:internal/s…eams/duplex:94	
+0.2 ms0.03 %	10.6 ms1.32 %	connectionListenernode:_http_server:437	
+0.2 ms0.03 %	0.3 ms0.04 %	getNewAsyncIdnode:net:156	
+0.2 ms0.03 %	0.2 ms0.03 %	setnode:net:1703	
+0.2 ms0.03 %	0.5 ms0.06 %	initSocketHandlenode:net:254	
+0.2 ms0.03 %	0.8 ms0.10 %	getHighWaterMarknode:internal/streams/state:19	
+0.2 ms0.03 %	0.8 ms0.10 %	unrefActivenode:internal/timers:317	
+0.2 ms0.03 %	0.3 ms0.04 %	WritableStatenode:internal/s…ms/writable:77	
+0.2 ms0.03 %	0.2 ms0.03 %	TimersListnode:internal/timers:241	
+0.2 ms0.03 %	0.7 ms0.08 %	emitStatisticsnode:internal/http:36	
+0.2 ms0.03 %	0.2 ms0.03 %	(anónimo)utils.js:92	
+0.2 ms0.03 %	0.2 ms0.03 %	RegExp: (\[[^[\]]*])	
+0.2 ms0.03 %	0.6 ms0.07 %	isEncodingnode:buffer:529	
+0.2 ms0.03 %	0.2 ms0.03 %	get name	
+0.2 ms0.03 %	0.2 ms0.03 %	createListenerindex.js:161	
+0.2 ms0.03 %	0.2 ms0.03 %	listenerindex.js:80	
+0.1 ms0.01 %	0.1 ms0.01 %	setRequestTimeoutnode:_http_server:762	
+0.1 ms0.01 %	0.1 ms0.01 %	setFreeListLength	
+0.1 ms0.01 %	0.1 ms0.01 %	noopnode:internal/util/debuglog:47	
+0.1 ms0.01 %	0.2 ms0.03 %	shiftnode:internal/p…rity_queue:107	
+0.1 ms0.01 %	0.1 ms0.01 %	howMuchToReadnode:internal/s…s/readable:377	
+0.1 ms0.01 %	1.5 ms0.18 %	onFinishnode:internal/s…s/writable:665	
+0.1 ms0.01 %	0.1 ms0.01 %	DTRACE_NET_SERVER_CONNECTION	
+0.1 ms0.01 %	0.1 ms0.01 %	removeAtnode:internal/p…ority_queue:93	
+0.1 ms0.01 %	0.1 ms0.01 %	onSocketResumenode:_http_server:965	
+0.1 ms0.01 %	0.1 ms0.01 %	arrayClonenode:events:877	
+0.1 ms0.01 %	2.3 ms0.28 %	socketOnEndnode:_http_server:602	
+0.1 ms0.01 %	1.1 ms0.14 %	socketOnClosenode:_http_server:588	
+0.1 ms0.01 %	0.1 ms0.01 %	BufferListnode:internal/s…buffer_list:14	
+0.1 ms0.01 %	0.1 ms0.01 %	_flushOutputnode:_http_outgoing:951	
+0.1 ms0.01 %	0.1 ms0.01 %	getnode:internal/s…s/writable:787	
+0.1 ms0.01 %	0.1 ms0.01 %	finish	
+0.1 ms0.01 %	2.0 ms0.25 %	Socket.endnode:net:608	
+0.1 ms0.01 %	0.1 ms0.01 %	getOrSetAsyncIdnode:internal/async_hooks:421	
+0.1 ms0.01 %	0.1 ms0.01 %	getAsyncId	
+0.1 ms0.01 %	0.1 ms0.01 %	set onread	
+0.1 ms0.01 %	0.1 ms0.01 %	undestroynode:internal/s…ms/destroy:160	
+0.1 ms0.01 %	0.1 ms0.01 %	constructnode:internal/s…ms/destroy:225	
+0.1 ms0.01 %	0.1 ms0.01 %	destroyHooksExistnode:internal/async_hooks:487	
+0.1 ms0.01 %	0.1 ms0.01 %	freenode:internal/freelist:21	
+0.1 ms0.01 %	0.3 ms0.04 %	pushnode:internal/fixed_queue:99	
+0.1 ms0.01 %	0.1 ms0.01 %	generateSocketListenerWrappernode:_http_server:1000	
+0.1 ms0.01 %	0.8 ms0.10 %	allocnode:internal/freelist:15	
+0.1 ms0.01 %	1.5 ms0.18 %	prefinishnode:internal/s…s/writable:719	
+0.1 ms0.01 %	0.1 ms0.01 %	isFullnode:internal/fixed_queue:71	
+0.1 ms0.01 %	0.7 ms0.08 %	parsersCbnode:_http_common:170	
+0.1 ms0.01 %	1.4 ms0.17 %	callFinalnode:internal/s…s/writable:662	
+0.1 ms0.01 %	0.1 ms0.01 %	HTTPParser	
+0.1 ms0.01 %	0.1 ms0.01 %	getnode:internal/b…_execution:317	
+0.1 ms0.01 %	0.1 ms0.01 %	setHeadersindex.js:326	
+0.1 ms0.01 %	0.1 ms0.01 %	addListenersindex.js:229	
+0.1 ms0.01 %	0.1 ms0.01 %	parseArrayValueparse.js:33	
+0.1 ms0.01 %	0.1 ms0.01 %	isRegExputils.js:214	
+0.1 ms0.01 %	0.9 ms0.11 %	(anónimo)parse.js:91	
+0.1 ms0.01 %	0.1 ms0.01 %	slowCasesnode:internal/util:165	
+0.1 ms0.01 %	0.2 ms0.03 %	insertnode:internal/p…ority_queue:34	
+0.1 ms0.01 %	0.1 ms0.01 %	scheduleTimer	
+0.1 ms0.01 %	0.1 ms0.01 %	percolateUpnode:internal/p…ority_queue:73	
+0.1 ms0.01 %	0.1 ms0.01 %	pushnode:internal/fixed_queue:75	
+0.0 ms0.00 %	1.2 ms0.15 %	(anónimo)node:net:685	
+0.0 ms0.00 %	1.6 ms0.20 %	Socket._readnode:net:596	
+0.0 ms0.00 %	0.1 ms0.01 %	getnode:net:548	
+0.0 ms0.00 %	1.0 ms0.13 %	shouldTransformindex.js:270	
+0.0 ms0.00 %	3.3 ms0.41 %	utcDatenode:internal/http:21	
+0.0 ms0.00 %	0.2 ms0.03 %	initHooksExistnode:internal/async_hooks:47

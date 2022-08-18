@@ -1,0 +1,4 @@
+ $ curl http://localhost:8080?max=100000 > result_profilingCurl.txt                % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   139  100   139    0     0  38654      0 --:--:-- --:--:-- --:--:-- 46333
+
