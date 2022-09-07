@@ -10,16 +10,18 @@
 <body>
     <h2>Tus Carritos</h2>
     <%carts.map(cart => {%>
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="IMAGEN DE CARRITO">
-            <div class="card-body">
-                <h5 class="card-title"><%-cart.id-%></h5>
-                <p class="card-text"><%-cart.Creation-%></p>
+        <a href="/carrito/<%-cart._id-%>/productos">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="IMAGEN DE CARRITO">
+                <div class="card-body">
+                    <h5 class="card-title"><%-cart.id-%></h5>
+                    <p class="card-text"><%-cart.Creation-%></p>
+                </div>
+                <div class="card-body">
+                    <a href="#" class="card-link">Borrar</a>
+                </div>
             </div>
-            <div class="card-body">
-                <a href="#" class="card-link">Borrar</a>
-            </div>
-        </div>
+        </a>
     <% })%>
 </body>
 </html>
