@@ -18,19 +18,10 @@ const findUserbyName = (username) =>{
         })
 }
 
-const createNewUser = (usernew) =>{
-    const newUser= new User()        
-    newUser.name = usernew.username      
-    newUser.password = usernew.password    
-    newUser.email = usernew.email   
-    newUser.adress = usernew.adress    
-    newUser.age = usernew.age   
-    newUser.phone = usernew.phone
+const createNewUser = (newUser) =>{
+    newUser = new User()        
     newUser.save()
 }
-
-
-
 
 const findProduct = () =>{
     db
