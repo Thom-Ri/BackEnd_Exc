@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Este es el Home</h1>
+    <h2>Bienvenido</h2>
+    <a href="apiUser/logout"><button>LogOut</button></a>
+    <a href="apiCart/cart"><button>Tu Carrito</button></a>
+
+
+    <h2>Productos</h2>
+    <% products.map(producto => {%>
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="IMAGEN DE PRODUCTO">
+        <div class="card-body">
+            <h5 class="card-title"><%-producto.title-%></h5>
+            <p class="card-text"><%-producto.text-%></p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"> Precio <%-producto.price-%></li>
+            <li class="list-group-item">ID: <%-producto.id-%> </li>
+            <li class="list-group-item">Codigo: <%-producto.code-%> </li>
+            <li class="list-group-item">Ultima actualizacion: <%-producto.timestamp-%> </li>
+        </ul>
+        <div class="card-body">
+            <a href="#" class="card-link"><%-producto.Stock-%></a>
+            <a href="#" class="card-link">Agregar a carrito</a>
+        </div>
+      </div>
+    <% });%>
+
+
+
+
+
+</body>
+</html>

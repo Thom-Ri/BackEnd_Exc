@@ -1,0 +1,101 @@
+
+/////USER////////////
+
+query{
+	getAll(id:qhduqiowaaa1334e2a){
+		nombre
+        	edad
+        	email
+        	password
+        	adress
+        	phone
+	}
+	getOne(id:awehd1782g1111243d){
+		nombre
+        	edad
+        	email
+        	password
+        	adress
+        	phone
+	}
+}
+
+
+mutation {
+ 	create(
+	nombre: Juan,
+        edad: 33,
+        email : jauncho@gmail.com,
+        password : juan3214,
+        adress: eeuu y liniers,
+        phone: 341535456
+	){
+		id_
+		nombre
+        	edad
+        	email
+        	password
+        	adress
+        	phone	
+	}
+
+	Update(
+		nombre: Juan,
+        	edad: 34,
+        	email : jauncho2@gmail.com,
+        	password : juan32145,
+        	adress: eeuu y mendoza,
+        	phone: 341535456
+	){
+		id_
+		nombre
+        	edad
+        	email
+        	password
+        	adress
+        	phone	
+	}
+
+	UserDelete(
+		ID: ziuaqbefioññ222jfo
+	)
+	
+}
+
+
+/////CART////////////
+
+query{
+	getAll(id:qhduqiowaaa1334e2a){
+		creations
+        products
+	}
+	getOne(id:awehd1782g1111243d){
+		creations
+        products
+	}
+}
+
+
+mutation {
+ 	create(
+	creations: 9/8/22
+    products: {product object}
+	){
+		creations
+        products	
+	}
+
+	Update(
+		creations: 19/22
+        products
+	){
+		creations
+        products
+	}
+
+	UserDelete(
+		ID: ziuaqbefioññ222jfo
+	)
+	
+}

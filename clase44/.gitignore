@@ -1,0 +1,10 @@
+node_modules/
+
+
+# //userRouter.get('/login')
+#   //userRouter.get('/signin')
+#   //userRouter.post('/login', userController.passLogin.bind(userController))
+#   //userRouter.post('/signin', userController.passSingin.bind(userController))
+#   //userRouter.get('/logout')
+#// cartRouter.get('/:id/productos', cartController.getCartById.bind(cartController))
+#//ProductRouter.get('/home', userController.getAll.bind(userController))
