@@ -1,0 +1,62 @@
+
+/////USER////////////
+
+query{
+	getAll({
+		nombre: "juan",
+        	edad: 23,
+        	email: "loquesea@gmail.com",
+        	password:"1234532",
+        	adress:"liners y san cristobal",
+        	phone:35256266
+	}){
+		nombre
+		edad
+	}
+	getOne(id:1){
+		nombre
+        	edad
+        	email
+        	password
+        	adress
+        	phone
+	}
+}
+
+
+mutation {
+ 	create(datos:{
+				nombre: "Juan",
+        edad: 33,
+        email : "jauncho@gmail.com",
+        password : "juan3214",
+        adress: "eeuu y liniers",
+        phone: 341535456
+	}){
+				nombre
+        edad
+        email
+        password
+        adress
+        phone	
+	}
+}
+mutation {
+ 	update(id:"1",datos:{
+
+		nombre: "Juan lopez",
+        	edad: 34,
+        	email : "jauncho2@gmail.com",
+        	password : "juan214",
+        	adress: "eeuu y liniers",
+        	phone: 341535456
+	}){
+		nombre
+        	edad
+        	
+	}
+}
+
+mutation {
+ 	delete(id:"1",{})
+}		
